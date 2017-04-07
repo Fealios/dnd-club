@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { character } from '../character.model';
 import { CharacterService } from '../character.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-character-list',
@@ -11,9 +13,13 @@ import { CharacterService } from '../character.service';
 export class CharacterListComponent implements OnInit {
   characters = this.characterService.characters;
 
-  constructor(private characterService: CharacterService) { }
+  constructor(private router: Router, private characterService: CharacterService) { }
 
   ngOnInit() {
   }
 
+  goToDetails(clickedCharacter){
+    console.log(clickedCharacter);
+    this.router.navigate(['character', clickedCharacter.$key])
+  }
 }

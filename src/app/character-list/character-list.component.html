@@ -2,12 +2,11 @@
 
 <div class="character-list" *ngFor="let character of characters | async">
   <ul>
-    <li>{{character.name}}</li>
+    <a (click)="goToDetails(character)"><li>{{character.name}}</li></a>
     <li>{{character.race}}</li>
     <li>{{character.characterclass}}</li>
     <li>{{character.level}}</li>
     <li>{{character.role}}</li>
-    <li>{{character.allignment}}</li>    
+    <li>{{character.allignment}}</li>
   </ul>
-
 </div>
