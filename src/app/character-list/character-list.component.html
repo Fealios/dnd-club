@@ -1,5 +1,3 @@
-<h3> character list </h3>
-
 <select (change)="onChange($event.target.value)">
   <option value="All">All Roles</option>
   <option value="Tank">Tanks</option>
@@ -8,11 +6,11 @@
   <option value="Melee DPS">Melee DPS</option>
 </select>
 
-<div class="row" *ngFor="let character of characters | async">
-  <div class="col-md-7">
+<div class="row character-list" *ngFor="let character of characters | async">
+  <div class="col-sm-5">
     <ul>
-      <a href="#" (click)="goToDetails(character)"><li>{{character.name}}</li></a>
-      <li class="name">{{character.race}}</li>
+      <a href="#" (click)="goToDetails(character)"><li class="name">{{character.name}}</li></a>
+      <li class="race">{{character.race}}</li>
       <li class="class">{{character.characterclass}}</li>
       <li class="level">{{character.level}}</li>
       <li class="role">{{character.role}}</li>
