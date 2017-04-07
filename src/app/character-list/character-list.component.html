@@ -11,12 +11,12 @@
 <div class="row" *ngFor="let character of characters | async">
   <div class="col-md-7">
     <ul>
-      <a href="#"(click)="goToDetails(character)"><li>{{character.name}}</li></a>
-      <li>{{character.race}}</li>
-      <li>{{character.characterclass}}</li>
-      <li>{{character.level}}</li>
-      <li>{{character.role}}</li>
-      <li>{{character.allignment}}</li>
+      <a href="#" (click)="goToDetails(character)"><li>{{character.name}}</li></a>
+      <li class="name">{{character.race}}</li>
+      <li class="class">{{character.characterclass}}</li>
+      <li class="level">{{character.level}}</li>
+      <li class="role">{{character.role}}</li>
+      <li class="allignment">{{character.allignment}}</li>
     </ul>
   </div>
   <div class="col-md-3">

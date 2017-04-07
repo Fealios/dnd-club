@@ -1,6 +1,8 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { CharacterService } from '../character.service';
 import { character } from '../character.model';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-update',
@@ -10,10 +12,14 @@ import { character } from '../character.model';
 })
 export class UpdateComponent implements OnInit {
   @Input() selectedCharacter;
-  constructor(characterService: CharacterService) { }
+
+  constructor(private characterService: CharacterService, private router: Router) { }
 
   ngOnInit() {
   }
 
-
+  editThisCharacter(character){
+    this.characterService.updateCharacter(character);
+    this.router.navigate(['']);
+  }
 }

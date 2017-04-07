@@ -1,3 +1,15 @@
-<div ng-if="selectedCharacter">
-  <h3> showing </h3>
+<div *ngIf="selectedCharacter">
+  <div class="form-group">
+    <label>Name:</label>
+    <input [(ngModel)]="selectedCharacter.name">
+  </div>
+  <div class="form-group">
+    <label>Allignment:</label>
+    <input [(ngModel)]="selectedCharacter.allignment">
+  </div>
+  <div class="form-group">
+    <label>Level:</label>
+    <input [(ngModel)]="selectedCharacter.level">
+  </div>
+  <button (click)="editThisCharacter(selectedCharacter)">done</button>
 </div>
