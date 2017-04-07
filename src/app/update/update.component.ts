@@ -5,17 +5,15 @@ import { character } from '../character.model';
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
-  styleUrls: ['./update.component.css']
+  styleUrls: ['./update.component.css'],
+  providers: [CharacterService]
 })
 export class UpdateComponent implements OnInit {
-  @Input() childSelectedCharacter: character;
+  @Input() selectedCharacter;
   constructor(characterService: CharacterService) { }
 
   ngOnInit() {
   }
 
-  editCharacter(name: string, allignment: string, characterclass: string, race; string, role: string, level: number){
-    
-  }
 
 }

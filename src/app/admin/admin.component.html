@@ -1,6 +1,6 @@
 <div class="character-admin" *ngFor="let character of characters | async">
   <ul>
-    <li>{{character.name}}<button (click)="selectedCharacterForEdit(character)"</li>
+    <li>{{character.name}}<button (click)="selectedCharacterForEdit(character)">Edit</button></li>
     <app-update [selectedCharacter]="clickedCharacter"></app-update>
   </ul>
 </div>

@@ -10,8 +10,9 @@ import { character } from '../character.model';
 })
 export class AdminComponent {
   characters = this.characterService.characters;
+  clickedCharacter: character = null;
+
   constructor(private characterService: CharacterService) { }
-  clickedCharacter = null;
 
   ngOnInit() {
   }
