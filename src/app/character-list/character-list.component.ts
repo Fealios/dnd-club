@@ -12,11 +12,14 @@ import { Router } from '@angular/router';
 })
 export class CharacterListComponent {
   characters = this.characterService.characters;
-
+  filterByRole: string = "All";
 
   constructor(private router: Router, private characterService: CharacterService) { }
 
-
+  onChange(role) {
+    console.log(this.characters);
+    this.filterByRole = role;
+  }
 
   goToDetails(clickedCharacter){
     console.log(clickedCharacter);

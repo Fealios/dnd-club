@@ -9,6 +9,8 @@ import { CharacterListComponent } from './character-list/character-list.componen
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { routing } from './app.routing';
 import { AdminComponent } from './admin/admin.component';
+import { UpdateComponent } from './update/update.component';
+// import { RolePipe } from './role.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +24,9 @@ export const firebaseConfig = {
     AppComponent,
     CharacterListComponent,
     CharacterDetailComponent,
-    AdminComponent
+    AdminComponent,
+    UpdateComponent
+    // ,RolePipe
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,40 @@
-admin component
+<div class="character-admin" *ngFor="let character of characters | async">
+  <ul>
+    <li>{{character.name}}<button (click)="selectedCharacterForEdit(character)"</li>
+    <app-update [selectedCharacter]="clickedCharacter"></app-update>
+  </ul>
+</div>
+
+<div class="form-holder">
+  <h3> New Character </h3>
+  <div class="form-group">
+      <label>Name:</label>
+      <input type="text" #newName>
+  </div>
+  <div class="form-group">
+    <label>Race:</label>
+    <input type="text" #newRace>
+  </div>
+  <div class="form-group">
+    <label>Class:</label>
+    <input type="text" #newCharacterclass>
+  </div>
+  <div class="form-group">
+    <label>Level:</label>
+    <input type="text" #newLevel>
+  </div>
+  <div class="form-group">
+      <label>Allignment:</label>
+      <input type="text" #newAllignment>
+  </div>
+  <div class="form-group">
+      <label>Role:</label>
+      <select #newRole>
+        <option value="Ranged DPS">Ranged DPS</option>
+        <option value="Melee DPS">Melee DPS</option>
+        <option value="Tank">Tank</option>
+        <option value="Support">Support</option>
+      </select>
+  </div>
+  <button (click)="formSubmit(newName.value, newRace.value, newCharacterclass.value, newLevel.value, newAllignment.value, newRole.value)">Add</button>
+</div>

@@ -9,10 +9,20 @@ import { character } from '../character.model';
   providers: [CharacterService]
 })
 export class AdminComponent {
-  characters: character[] = [];
+  characters = this.characterService.characters;
   constructor(private characterService: CharacterService) { }
+  clickedCharacter = null;
 
   ngOnInit() {
+  }
+
+  formSubmit(name, allignment, characterclass, race, role, level){
+    var newCharacter: character = new character(name, allignment, characterclass, race, role, level);
+    this.characterService.addNewCharacter(newCharacter);
+  }
+
+  selectedCharacterForEdit(character){
+    this.clickedCharacter = character;
   }
 
 }

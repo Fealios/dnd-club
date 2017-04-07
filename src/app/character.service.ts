@@ -18,4 +18,8 @@ export class CharacterService {
   getCharacterById(id){
       return this.angularFire.database.object('characters/' + id);
   }
+
+  addNewCharacter(newCharacter: character){
+    this.characters.push(newCharacter);
+  }
 }

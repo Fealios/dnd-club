@@ -1,12 +1,26 @@
 <h3> character list </h3>
 
-<div class="character-list" *ngFor="let character of characters | async">
-  <ul>
-    <a href="#"(click)="goToDetails(character)"><li>{{character.name}}</li></a>
-    <li>{{character.race}}</li>
-    <li>{{character.characterclass}}</li>
-    <li>{{character.level}}</li>
-    <li>{{character.role}}</li>
-    <li>{{character.allignment}}</li>
-  </ul>
+<select (change)="onChange($event.target.value)">
+  <option value="All">All Roles</option>
+  <option value="Tank">Tanks</option>
+  <option value="Support">Support</option>
+  <option value="Ranged DPS">Ranged DPS</option>
+  <option value="Melee DPS">Melee DPS</option>
+</select>
+
+<div class="row" *ngFor="let character of characters | async">
+  <div class="col-md-7">
+    <ul>
+      <a href="#"(click)="goToDetails(character)"><li>{{character.name}}</li></a>
+      <li>{{character.race}}</li>
+      <li>{{character.characterclass}}</li>
+      <li>{{character.level}}</li>
+      <li>{{character.role}}</li>
+      <li>{{character.allignment}}</li>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h3> image placeholder </h3>
+  </div>
+
 </div>
