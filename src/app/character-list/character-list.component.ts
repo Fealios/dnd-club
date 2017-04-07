@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./character-list.component.css'],
   providers: [CharacterService]
 })
-export class CharacterListComponent implements OnInit {
+export class CharacterListComponent {
   characters = this.characterService.characters;
+
 
   constructor(private router: Router, private characterService: CharacterService) { }
 
-  ngOnInit() {
-  }
+
 
   goToDetails(clickedCharacter){
     console.log(clickedCharacter);

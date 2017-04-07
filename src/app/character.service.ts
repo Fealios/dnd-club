@@ -14,4 +14,8 @@ export class CharacterService {
   getCharacters() {
     return this.characters;
   }
+
+  getCharacterById(id){
+      return this.angularFire.database.object('characters/' + id);
+  }
 }
