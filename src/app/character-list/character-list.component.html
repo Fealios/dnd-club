@@ -1,0 +1,13 @@
+<h3> character list </h3>
+
+<div class="character-list" *ngFor="let character of characters | async">
+  <ul>
+    <li>{{character.name}}</li>
+    <li>{{character.race}}</li>
+    <li>{{character.characterclass}}</li>
+    <li>{{character.level}}</li>
+    <li>{{character.role}}</li>
+    <li>{{character.allignment}}</li>    
+  </ul>
+
+</div>

@@ -1,0 +1,10 @@
+{
+  "characters": [{
+    "name": "Elrond",
+    "allignment": "Lawful neutral",
+    "race": "High Elf",
+    "characterclass": "Wizard",
+    "level": 1,
+    "role": "Ranged DPS"
+    }]
+}
