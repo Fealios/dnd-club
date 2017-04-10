@@ -10,6 +10,7 @@ import { CharacterDetailComponent } from './character-detail/character-detail.co
 import { routing } from './app.routing';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
+import { AboutComponent } from './about/about.component';
 // import { RolePipe } from './role.pipe';
 
 export const firebaseConfig = {
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     CharacterListComponent,
     CharacterDetailComponent,
     AdminComponent,
-    UpdateComponent
+    UpdateComponent,
+    AboutComponent
     // ,RolePipe
   ],
   imports: [
