@@ -23,6 +23,11 @@ export class CharacterService {
     this.characters.push(newCharacter);
   }
 
+  deleteCharacter(character) {
+    var currentCharacter = this.getCharacterById(character.$key);
+    currentCharacter.remove();
+  }
+
   updateCharacter(localCharacter){
     var characterInFirebase = this.getCharacterById(localCharacter.$key);
     characterInFirebase.update({

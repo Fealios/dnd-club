@@ -26,4 +26,8 @@ export class AdminComponent {
     this.clickedCharacter = character;
   }
 
+  deleteCharacter(character){
+    this.characterService.deleteCharacter(character);
+  }
+
 }
