@@ -17,8 +17,8 @@ export class AdminComponent {
   ngOnInit() {
   }
 
-  formSubmit(name, allignment, characterclass, race, role, level){
-    var newCharacter: character = new character(name, allignment, characterclass, race, role, level);
+  formSubmit(name, allignment, characterclass, race, role, level, img){
+    var newCharacter: character = new character(name, allignment, characterclass, race, role, level, img);
     this.characterService.addNewCharacter(newCharacter);
   }
 

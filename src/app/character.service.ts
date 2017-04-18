@@ -36,7 +36,8 @@ export class CharacterService {
       characterclass: localCharacter.characterclass,
       race: localCharacter.race,
       role: localCharacter.role,
-      level: localCharacter.level
+      level: localCharacter.level,
+      img: localCharacter.img
     })
   }
 }

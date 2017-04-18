@@ -5,6 +5,7 @@ export class character {
     public characterclass: string,
     public race: string,
     public role: string,
-    public level: number
+    public level: number,
+    public img: string
   ){}
 }

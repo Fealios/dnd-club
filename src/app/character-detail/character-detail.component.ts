@@ -13,19 +13,20 @@ import { character } from '../character.model';
 })
 
 export class CharacterDetailComponent implements OnInit {
-  characterId: number;
+  characterId: string;
   characterToDisplay: character;
 
   constructor(private route: ActivatedRoute, private location: Location, private characterService: CharacterService) { }
 
   ngOnInit() {
-
     this.route.params.forEach((urlParameters) => {
-      this.characterId = parseInt(urlParameters['id']);
+      this.characterId = urlParameters['id'];
+      console.log(this.characterId);
     });
     this.characterService.getCharacterById(this.characterId).subscribe(dataLastEmittedFromObserver => {
       this.characterToDisplay = dataLastEmittedFromObserver;
     });
+    console.log(this.characterToDisplay);
   }
 
 }

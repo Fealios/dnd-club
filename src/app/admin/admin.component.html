@@ -41,5 +41,9 @@
         <option value="Support">Support</option>
       </select>
   </div>
-  <button (click)="formSubmit(newName.value, newRace.value, newCharacterclass.value, newLevel.value, newAllignment.value, newRole.value)">Add</button>
+  <div class="form-group">
+    <label>Img URL:</label>
+    <input type="text" #newImgUrl>
+  </div>
+  <button (click)="formSubmit(newName.value, newAllignment.value, newCharacterclass.value, newRace.value, newRole.value, newLevel.value, newImgUrl.value)">Add</button>
 </div>

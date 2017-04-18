@@ -9,7 +9,7 @@
 <div class="row character-list" *ngFor="let character of characters | async">
   <div class="col-sm-5">
     <ul>
-      <a href="#" (click)="goToDetails(character)"><li class="name">{{character.name}}</li></a>
+      <a (click)="goToDetails(character)"><li class="name">{{character.name}}</li></a>
       <li class="race">{{character.race}}</li>
       <li class="class">{{character.characterclass}}</li>
       <li class="level">{{character.level}}</li>
@@ -18,7 +18,7 @@
     </ul>
   </div>
   <div class="col-md-3">
-    <h3> image placeholder </h3>
+    <img class="character-img" src="{{character?.img}}">
   </div>
 
 </div>
