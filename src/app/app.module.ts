@@ -11,7 +11,7 @@ import { routing } from './app.routing';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
 import { AboutComponent } from './about/about.component';
-// import { RolePipe } from './role.pipe';
+import { RolePipe } from './role.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,7 +28,7 @@ export const firebaseConfig = {
     AdminComponent,
     UpdateComponent,
     AboutComponent
-    // ,RolePipe
+    ,RolePipe
   ],
   imports: [
     BrowserModule,

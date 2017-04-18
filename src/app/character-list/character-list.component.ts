@@ -17,7 +17,7 @@ export class CharacterListComponent {
   constructor(private router: Router, private characterService: CharacterService) { }
 
   onChange(role) {
-    console.log(this.characters);
+    // console.log(this.characters);
     this.filterByRole = role;
   }
 

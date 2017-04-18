@@ -6,7 +6,7 @@
   <option value="Melee DPS">Melee DPS</option>
 </select>
 
-<div class="row character-list" *ngFor="let character of characters | async">
+<div class="row character-list" *ngFor="let character of characters | async | role:filterByRole ">
   <div class="col-sm-5">
     <ul>
       <a (click)="goToDetails(character)"><li class="name">{{character.name}}</li></a>
