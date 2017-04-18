@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand');
+
 body {
     background-image: url('./assets/tavern-background.jpg')!important;
     background-repeat: no-repeat;
@@ -19,4 +21,15 @@ body {
 footer {
   margin-top: 20px;
   text-align: center;
+}
+
+.character-info {
+  margin-left: 10vh;
+  font-family: 'Patrick Hand', cursive;
+
+  /*opacity: 1.5 !important;*/
+}
+
+li {
+  list-style-type: none;
 }

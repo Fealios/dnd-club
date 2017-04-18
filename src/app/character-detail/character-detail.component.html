@@ -1,2 +1,15 @@
 
-<h1> {{characterToDisplay?.name}} </h1>
+<div class="character-info">
+  <h1> {{characterToDisplay?.name}} </h1>
+
+  <ul>
+    <li>Race: {{characterToDisplay?.race}}</li>
+    <li>Class: {{characterToDisplay?.characterclass}}</li>
+    <li>Level: {{characterToDisplay?.level}}</li>
+    <li>Role: {{characterToDisplay?.role}}</li>
+    <li>Alignment: {{characterToDisplay?.allignment}}</li>
+  </ul>
+
+</div>
+
+<img class="character-img" src="{{characterToDisplay?.img}}"/>
