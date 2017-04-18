@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('./assets/tavern-background.jpg')!important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+.container {
+  background-color: white;
+  opacity: .5;
+  height: 100%;
+  padding-top: 30px;
+  border-radius: 3px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}

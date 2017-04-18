@@ -8,13 +8,12 @@ li {
   padding-top: 30px;
 }
 
-div {
-  border: solid;
-}
-
 .name {
   font-size: 40px;
   /*font-weight:bolder;*/
   font-family: 'Great Vibes', cursive;
+}
 
+.form-control{
+  width: 200px;
 }
